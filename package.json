@@ -1,0 +1,30 @@
+{
+  "name": "friendly-feed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mini:css": "cleancss -o ./dist/friendly-feed.min.css ./src/friendly-feed.css",
+    "postmini:css": "echo The CSS has been minified",
+    "mini:js": "terser ./src/friendly-feed.js -c -m -o ./dist/friendly-feed.min.js",
+    "postmini:js": "echo The JS has been minified",
+    "dist": "npm run mini:js & npm run mini:css",
+    "postdist": "echo You did it"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "clean-css": "^4.2.1",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.18.2",
+    "terser": "^4.3.8"
+  }
+}
