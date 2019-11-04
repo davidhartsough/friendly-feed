@@ -19,6 +19,7 @@ function replacePost(child, text) {
   const node = document.createTextNode(text);
   para.appendChild(node);
   child.parentNode.replaceChild(para, child);
+  console.log(`replaced a post with ${text}`);
 }
 // const removePost = child => child.parentNode.removeChild(child);
 function friendlyFeed() {
@@ -59,4 +60,4 @@ function friendlyFeed() {
   });
 }
 friendlyFeed();
-setInterval(friendlyFeed, 2000);
+setInterval(friendlyFeed, 3000);
